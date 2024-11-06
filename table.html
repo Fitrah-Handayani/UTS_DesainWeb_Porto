@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Tutorial Membuat Tabel</title>
+    <style>
+        /* Styling untuk tabel */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #9EB384;
+        }
+
+        .wrapper {
+            max-height: 600px;
+            overflow-y: auto;
+        }
+
+        /* Stylish button */
+      button {
+        background-color: #9EB384;
+        color: #fff;
+        border: none;
+        padding: 15px 30px;
+        border-radius: 25px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      /* Button Style */
+      .back-button {
+      display: inline-block;
+      background-color: #9EB384;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 10px;
+      cursor: pointer;
+      color: #fff;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+      position: fixed;
+      top: 50px;
+      right: 135px;
+      z-index: 1100;
+      text-align: center;
+      text-decoration: none;
+    }
+
+        .back-button:hover {
+            background: var(--second-color);
+        }
+      
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav id="header">
+            <div class="nav-logo">
+                <p class="nav-name">Tabel</p>
+                <span>.</span>
+            </div>
+        </nav>
+
+          <!-- Tombol Kembali ke halaman sebelumnya (tutorial) -->
+    <a href="tutorial.html" class="back-button">Back</a>
+
+        <main class="wrapper">
+            <section class="section" id="tutorials">
+              <div class="top-header">
+                <h1>Tutorial: CSS Basics</h1>
+              </div>
+    
+    <!-- Card Style untuk Latihan Page Margin -->
+      <div class="tutorial-box">
+        <h2>Tutorial membuat tabel</h2>
+          <p>
+            Tabel adalah elemen HTML yang digunakan untuk menampilkan data dalam format terstruktur yang terdiri dari baris dan kolom. CSS digunakan untuk menata tabel agar lebih rapi, dengan mengatur warna latar belakang, lebar tabel, serta memberikan batas antar sel untuk memudahkan pembacaan data. Tutorial ini membantu pengguna memahami dasar pembuatan dan pengaturan tabel dalam HTML dan CSS secara langsung.
+            .
+          </p>
+              
+          <h3>HTML & CSS Code:</h3>
+          <textarea
+          class="editor"
+          rows="20"
+         id="contentCode"
+        placeholder="Masukkan kode HTML dan CSS di sini"
+          >
+    <!DOCTYPE html>
+      <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+              <link rel="stylesheet" href="assets/css/style.css" />
+                <title>Tutorial Membuat Tabel</title>
+              <style>
+                /* Styling untuk tabel */
+                 table {
+                   width: 100%;
+                   border-collapse: collapse; /* Menggabungkan border antar sel */
+                    }
+                  th, td {
+                  border: 1px solid black; /* Menambahkan border pada setiap sel */
+                  padding: 8px;
+                  text-align: left; /* Menyelaraskan teks ke kiri */
+                  }
+                  th {
+                  background-color: #9EB384; /* Memberikan warna latar pada header tabel */
+                    }
+                          
+                  /* Styling untuk bagian scrollable */
+                  .scrollable {
+                  max-height: 300px;
+                  overflow-y: auto; /* Mengaktifkan scroll vertikal */
+                  background-color: #f0f0f0;
+                  padding: 15px;
+                  margin-top: 20px;
+                  white-space: pre-wrap; /* Agar sintaks HTML tetap rapi */
+                    }
+                          
+                  code {
+                  background-color: #eaeaea;
+                  padding: 2px 4px;
+                  border-radius: 3px;
+                    }
+                  </style>
+                    </head>
+                    <body>
+
+                <h2>Tampilan Tabel</h2>
+                          
+                <!-- Membuat Tabel Sederhana -->
+                <table>
+                    <thead>
+                  <tr>
+                 <th>NPM</th>  
+                <th>Nama</th>
+                <th>IPK Sem 1</th>
+                <th>IPK Sem 2</th>
+                <th>IPK Sem 3</th>
+                <th>IPK Sem 4</th>
+                <th>IPK Sem 5</th>
+                <th>IPK Sem 6</th>
+                <th>IPK Sem 7</th>
+                <th>IPK Sem 8</th>
+                <th>Jurusan</th>
+                <th>Fakultas</th>
+                    </tr>
+                     </thead>
+                     <tbody>
+                  <tr>
+                <td>5220311017</td>
+                <td>Fitrah Handayani</td>
+                <td>3,65</td>
+                <td>3,80</td>
+                <td>3,63</td>
+                <td>3,86</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>Sistem Informasi</td>
+                <td>Sains dan Teknologi</td>
+                    </tr>
+                 <tr>
+                <td>522031100</td>
+                <td>Mia Anggreini</td>
+                <td>3,80</td>
+                <td>3,78</td>
+                <td>3,95</td>
+                <td>4,00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>Sistem Informasi</td>
+                <td>Sains dan Teknologi</td>
+                     </tr>
+                 <tr>
+                <td>5220311022</td>
+                <td>Nassa Fadilla</td>
+                <td>3,70</td>
+                <td>3,85</td>
+                <td>3,76</td>
+                <td>3,87</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>Sistem Informasi</td>
+                <td>Sains dan Teknologi</td>
+                      </tr>
+                  <tr>
+                <td>5220311034</td>
+                <td>Yesty Anggela</td>
+                <td>3,65</td>
+                <td>3,70</td>
+                <td>3,86</td>
+                <td>3,90</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>Sistem Informasi</td>
+                <td>Sains dan Teknologi</td>
+                        </tr>
+                      <tr>
+                <td>5190411378</td>
+                <td>Denny Nur Rahman</td>
+                <td>3,55</td>
+                <td>3,70</td>
+                <td>3,85</td>
+                <td>3,80</td>
+                <td>3,89</td>
+                <td>4,00</td>
+                <td>3,97</td>
+                <td>3,90</td>
+                <td>Informatika</td>
+                <td>Sains dan Teknologi</td>
+                        </tr>
+                    </tbody>
+                </table>
+            <script src="assets/js/main.js"></script>
+                    <br>
+            </body>
+                </html>
+                </textarea
+                    >
+                
+    <button class="run-button" onclick="runContentCode()">Run</button>
+    <button class="undo-button" onclick="undoContentCode()">
+    Undo
+    </button>
+                
+    <h3>Hasil:</h3>
+    <div class="preview" id="previewContent"></div>
+    </div>
+    </section>
+    </main>
+
+    <!-- ----- MAIN JS ----- -->
+    <script>
+        // Riwayat Kode
+        let contentCodeHistory = [];
+        // Fungsi untuk menjalankan kode konten
+        function runContentCode() {
+          const code = document.getElementById("contentCode").value;
+          document.getElementById("previewContent").innerHTML = code;
+          contentCodeHistory.push(code);
+        }
+  
+        // Fungsi untuk mengembalikan kode sebelumnya
+        function undoContentCode() {
+          if (contentCodeHistory.length > 1) {
+            contentCodeHistory.pop(); // Hapus entri terakhir
+            const previousCode =
+              contentCodeHistory[contentCodeHistory.length - 1];
+            document.getElementById("contentCode").value = previousCode;
+            document.getElementById("previewContent").innerHTML = previousCode; // Perbarui preview
+          } else {
+            document.getElementById("previewContent").innerHTML = ""; // Hapus hasil jika tidak ada riwayat
+            document.getElementById("contentCode").value = ""; // Hapus input juga
+          }
+          
+        }
+      </script>
+
+
+<!-- ----- MAIN JS ----- -->
+<script>
+  // Fungsi untuk kembali ke halaman sebelumnya
+  function goBack() {
+      window.history.back();
+  }
+</script>
+    </body>
+  </html>
+  
+    
+    

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Tutorial Membuat Tabel</title>
+    <style>
+        /* Stylish button */
+      button {
+        background-color: #9EB384;
+        color: #fff;
+        border: none;
+        padding: 15px 30px;
+        border-radius: 25px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      /* Button Style */
+      .back-button {
+      display: inline-block;
+      background-color: #9EB384;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 10px;
+      cursor: pointer;
+      color: #fff;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+      position: fixed;
+      top: 50px;
+      right: 135px;
+      z-index: 1100;
+      text-align: center;
+      text-decoration: none;
+    }
+        .back-button:hover {
+            background: var(--second-color);
+        }
+      
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav id="header">
+            <div class="nav-logo">
+                <p class="nav-name">Deploy</p>
+                <span>.</span>
+            </div>
+        </nav>
+
+         <!-- Tombol Kembali ke halaman sebelumnya (tutorial) -->
+    <a href="tutorial.html" class="back-button">Back</a>
+
+        <main class="wrapper">
+            <section class="section" id="tutorials">
+              <div class="top-header">
+                <h1>Tutorial: Membuat Repository</h1>
+              </div>
+    
+    <!-- Card Style untuk Latihan membuat tutorial deploy -->
+      <div class="tutorial-box">
+        <h2>Tutorial membagikan atau memasukkan website ke dalam akun github</h2>
+          <p>
+            Untuk melakukan deploy atau publikasi website HTML sederhana ke GitHub, kita dapat memanfaatkan fitur GitHub Pages yang disediakan oleh GitHub. GitHub Pages memungkinkan kita untuk dengan mudah menghosting website statis secara gratis, hanya dengan mengupload file HTML, CSS, dan JavaScript ke repositori di GitHub. Proses ini dimulai dengan membuat repositori baru atau menggunakan repositori yang sudah ada, kemudian mengatur pengaturan GitHub Pages pada tab "Settings" repositori untuk memilih branch yang berisi file website. Setelah itu, kita dapat mengakses website melalui URL yang disediakan oleh GitHub, memungkinkan siapa pun untuk melihat hasil karya kita secara online. Dengan menggunakan GitHub Pages, kita tidak hanya belajar tentang pengelolaan repositori dan kontrol versi, tetapi juga mendapatkan pengalaman dalam menerapkan praktik terbaik dalam pengembangan web.
+          </p>
+              
+          <h3>Terminal code:</h3>
+          <textarea
+          class="editor"
+          rows="20"
+         id="contentCode"
+        placeholder="Masukkan kode HTML dan CSS di sini"
+          >
+        Tutorial menyambungkan website dengan akun GitHub sebagai berikut :
+        1. Pastikan bahkan mempunyai akun GitHub.
+        2. Membuat Repository untuk menampung foder atau file project.
+        3. Tuliskan nama project yang ingin di masukkan.
+        4. Patikan memilih 'Public' agar project kita dapat di akses orang lain.
+        5. Lalu pilih 'Create Repository'.
+        6. Setelah itu buka codingan website pada visual studio dengan cara masuk ke visual stodio pilih menu 'file' lalu pilih 'Open Foldder'.
+        7. Jika sudah menampilkan sintax codingan project, pilih menu 'View' dan pilih 'terminal'.
+        8. Ketikan 'git init' untuk membuka folder .git di dalam project dan menandakan bahwa folder ini adalah repository Git.
+        9. Ketikan 'git add .' untuk menandakan bahwa semua file akan ditambahkan.
+        10. Ketikan 'git commit -m "first commit"' Untuk mendeskripsikan perubahan yang dibuat.
+        11. Ketikan 'git branch -M main' digunakan untuk mengganti nama branch saat ini menjadi main dan memaksa perubahan nama jika diperlukan.
+        12. Ketikan 'git remote add origin(masukkan link yang muncul pada akun GitHub setelah membuat repository)' menamdakan tempat memasukkan project ke dalam repository.
+        13. Ketikan 'git push -u origin main' untuk mengirimkan project ke GitHub.
+          </textarea>
+      </div>
+
+      <!-- ----- MAIN JS ----- -->
+      <script>
+        // Fungsi untuk kembali ke halaman sebelumnya
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+    </body>
+  </html>
+  
+    
+    

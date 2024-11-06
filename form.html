@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Tutorial Membuat Tabel</title>
+    <style>
+
+        /* Wrapper untuk hasil output */
+        .preview {
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-top: 15px;
+        }
+
+        button {
+        background-color: #9EB384;
+        color: #fff;
+        border: none;
+        padding: 15px 30px;
+        border-radius: 25px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      /* Button Style */
+      .back-button {
+      display: inline-block;
+      background-color: #9EB384;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 10px;
+      cursor: pointer;
+      color: #fff;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+      position: fixed;
+      top: 50px;
+      right: 135px;
+      z-index: 1100;
+      text-align: center;
+      text-decoration: none;
+    }
+
+        .back-button:hover {
+            background: var(--second-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav id="header">
+            <div class="nav-logo">
+                <p class="nav-name">Form</p>
+                <span>.</span>
+            </div>
+        </nav>
+
+         <!-- Tombol Kembali ke halaman sebelumnya (tutorial) -->
+    <a href="tutorial.html" class="back-button">Back</a>
+
+        <main class="wrapper">
+            <section class="section" id="tutorials">
+              <div class="top-header">
+                <h1>Tutorial: HTML & CSS Basics</h1>
+              </div>
+
+            <!-- Card Style untuk Tutorial membuat form -->
+            <div class="tutorial-box">
+                <h2>Tutorial Membuat Form</h2>
+                <p>Form login dan signup pada HTML dan CSS berfungsi sebagai antarmuka bagi pengguna untuk memasukkan data pribadi mereka, seperti email, username, dan password, yang diperlukan dalam proses otentikasi atau pendaftaran akun. Form login dirancang untuk pengguna yang sudah memiliki akun, memungkinkan mereka memasukkan kredensial mereka agar dapat mengakses fitur atau konten yang dibatasi. Di sisi lain, form signup dirancang untuk pengguna baru, memungkinkan mereka mendaftar dengan memasukkan data seperti nama lengkap, email, dan password, dan terkadang juga mengonfirmasi password untuk mencegah kesalahan input. Dalam HTML, struktur form ini dibangun menggunakan elemen form, input, dan button, yang masing-masing diatur untuk mengumpulkan data dengan benar dan mengirimkannya ke server. CSS kemudian diterapkan untuk memperindah tampilan form, membuatnya lebih menarik dan mudah digunakan. Pengaturan CSS, seperti padding, margin, border, dan warna, memberikan tampilan yang bersih dan modern, sementara animasi atau transisi ringan dapat ditambahkan untuk meningkatkan pengalaman pengguna, seperti memperjelas saat input aktif atau mengubah warna tombol ketika disentuh. Gabungan dari HTML dan CSS dalam pembuatan form login dan signup ini bertujuan untuk menyediakan akses mudah dan aman bagi pengguna, serta menciptakan kesan profesional dan user-friendly.
+                </p>
+
+                <h3>HTML & CSS Code:</h3>
+                <textarea
+                    class="editor"
+                    rows="20"
+                    id="contentCode"
+                    placeholder="Masukkan kode HTML dan CSS di sini"
+                >
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <title>Sign Up & Login</title>
+  <style>
+      body {
+          font-family: Arial, sans-serif;
+          background-color: #FAF1E4;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          margin: 0;
+      }
+      .container {
+          background-color: white;
+          padding: 20px;
+          border-radius: 8px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          width: 300px;
+      }
+      h2 {
+          text-align: center;
+      }
+      input[type="text"],
+      input[type="password"] {
+          width: 100%;
+          padding: 10px;
+          margin: 10px 0;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+      }
+      input[type="submit"],
+      input[type="reset"] {
+          width: 100%;
+          padding: 10px;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+          margin-top: 10px;
+      }
+      input[type="submit"] {
+          background-color: #435334;
+          color: white;
+      }
+      input[type="submit"]:hover, input[type="reset"]:hover {
+          opacity: 0.9;
+      }
+      input[type="reset"] {
+          background-color:#435334;
+          color: white;
+      }
+      .toggle-link {
+          display: block;
+          text-align: center;
+          margin-top: 10px;
+          color: #9EB384;
+          cursor: pointer;
+      }
+  </style>
+</head>
+<body>
+   <!-- Container untuk Form -->
+   <div class="container">
+    <!-- Form Sign Up -->
+    <div id="signupForm">
+        <h2>Sign Up</h2>
+        <form>
+            <label for="Email">Email:</label>
+            <input type="text" id="Email" name="Email" required>
+
+            <label for="newUsername">Username:</label>
+            <input type="text" id="newUsername" name="newUsername" required>
+
+            <label for="newPassword">Password:</label>
+            <input type="password" id="newPassword" name="newPassword" required>
+            
+            <label for="Password">Konfirmasi Password:</label>
+            <input type="password" id="Password" name="Password" required>
+            
+            <input type="submit" value="Sign Up">
+            <input type="reset" value="Reset">
+        </form>
+        <p class="toggle-link" onclick="toggleForm('login')">Sudah punya akun? Login di sini</p>
+    </div>
+
+    <!-- Form Login -->
+    <div id="loginForm" style="display:none;">
+        <h2>Login</h2>
+        <form>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            
+            <input type="submit" value="Login">
+            <input type="reset" value="Reset">
+        </form>
+        <p class="toggle-link" onclick="toggleForm('signup')">Belum punya akun? Sign Up di sini</p>
+    </div>
+</div>
+
+<script>
+    // Fungsi untuk menampilkan form Login atau Sign Up
+    function toggleForm(formType) {
+        if (formType === 'login') {
+            document.getElementById('signupForm').style.display = 'none';
+            document.getElementById('loginForm').style.display = 'block';
+        } else {
+            document.getElementById('signupForm').style.display = 'block';
+            document.getElementById('loginForm').style.display = 'none';
+        }
+    }
+
+    // Event untuk menangani submit form Sign Up
+    document.querySelector('#signupForm form').addEventListener('submit', function(event) {
+        event.preventDefault(); // Mencegah form refresh halaman
+
+        // Simpan username dan password ke localStorage (simulasi)
+        var newUsername = document.getElementById('newUsername').value;
+        var newPassword = document.getElementById('newPassword').value;
+
+        localStorage.setItem('username', newUsername);
+        localStorage.setItem('password', newPassword);
+
+        alert('Registrasi berhasil! Silakan login.');
+        toggleForm('login'); // Alihkan ke form login
+    });
+
+    // Event untuk menangani submit form Login
+    document.querySelector('#loginForm form').addEventListener('submit', function(event) {
+        event.preventDefault(); // Mencegah form refresh halaman
+
+        // Ambil username dan password dari localStorage
+        var storedUsername = localStorage.getItem('username');
+        var storedPassword = localStorage.getItem('password');
+
+        var enteredUsername = document.getElementById('username').value;
+        var enteredPassword = document.getElementById('password').value;
+
+        // Validasi username dan password
+        if (enteredUsername === storedUsername && enteredPassword === storedPassword) {
+            alert("Login berhasil!");
+        } else {
+            alert("Username atau password salah.");
+        }
+    });
+</script>
+</body>
+</html>
+                </textarea>
+
+                <button class="run-button" onclick="runContentCode()">Run</button>
+                <button class="undo-button" onclick="undoContentCode()">Undo</button>
+
+                <h3>Hasil:</h3>
+                <!-- Iframe untuk menampilkan hasil -->
+                <iframe class="preview" id="previewContent" style="height: 600px;"></iframe>
+            </div>
+        </section>
+    </main>
+
+  <!-- ----- MAIN JS ----- -->
+  <script>
+    // Riwayat Kode
+    let contentCodeHistory = [];
+    
+    // Fungsi untuk menjalankan kode konten
+    function runContentCode() {
+      const code = document.getElementById("contentCode").value;
+      const iframe = document.getElementById("previewContent");
+      iframe.srcdoc = code; // Menempatkan kode di dalam iframe
+      contentCodeHistory.push(code);
+
+      iframe.onload = function() {
+        // Sesuaikan tinggi iframe sesuai dengan konten
+        iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
+      }
+    }
+
+    // Fungsi untuk mengembalikan kode sebelumnya
+    function undoContentCode() {
+      if (contentCodeHistory.length > 1) {
+        contentCodeHistory.pop(); // Hapus entri terakhir
+        const previousCode = contentCodeHistory[contentCodeHistory.length - 1];
+        document.getElementById("contentCode").value = previousCode;
+        document.getElementById("previewContent").srcdoc = previousCode; // Perbarui preview
+      } else {
+        document.getElementById("previewContent").srcdoc = ""; // Hapus hasil jika tidak ada riwayat
+        document.getElementById("contentCode").value = ""; // Hapus input juga
+      }
+    }
+  </script>
+
+  <!-- ----- MAIN JS ----- -->
+  <script>
+    // Fungsi untuk kembali ke halaman sebelumnya
+    function goBack() {
+        window.history.back();
+    }
+</script>
+</body>
+</html>

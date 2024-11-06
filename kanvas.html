@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Tutorial Membuat Tabel</title>
+    <style>
+       button {
+        background-color: #9EB384;
+        color: #fff;
+        border: none;
+        padding: 15px 30px;
+        border-radius: 25px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      /* Button Style */
+      .back-button {
+      display: inline-block;
+      background-color: #9EB384;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 10px;
+      cursor: pointer;
+      color: #fff;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+      position: fixed;
+      top: 50px;
+      right: 135px;
+      z-index: 1100;
+      text-align: center;
+      text-decoration: none;
+    }
+
+        .back-button:hover {
+            background: var(--second-color);
+        }
+    </style>
+<body>
+    <div class="container">
+        <nav id="header">
+            <div class="nav-logo">
+                <p class="nav-name">Canvas</p>
+                <span>.</span>
+            </div>
+        </nav>
+
+         <!-- Tombol Kembali ke halaman sebelumnya (tutorial) -->
+    <a href="tutorial.html" class="back-button">Back</a>
+
+        <main class="wrapper">
+            <section class="section" id="tutorials">
+              <div class="top-header">
+                <h1>Tutorial: HTML Basics</h1>
+              </div>
+    
+    <!-- Card Style untuk Latihan tutorial membuat kanvas -->
+      <div class="tutorial-box">
+        <h2>Tutorial membuat canvas</h2>
+          <p>
+            Dalam HTML dan JavaScript, elemen canvas adalah sebuah area kosong yang digunakan untuk menggambar berbagai macam grafik secara dinamis langsung di dalam halaman web. Dengan bantuan JavaScript, canvas dapat menjadi media untuk menghasilkan gambar, grafik, animasi, bahkan elemen interaktif yang memungkinkan pengguna berinteraksi secara langsung dengan konten yang ditampilkan. Pada dasarnya, elemen canvas sendiri tidak menampilkan grafik atau gambar apa pun; ia hanya menyediakan sebuah ruang atau "kanvas" kosong di dalam halaman. Agar grafik atau gambar terlihat, kode JavaScript digunakan untuk menggambar atau mengatur bentuk dan elemen visual lain di atasnya. Melalui objek konteks (biasanya 2D atau WebGL untuk 3D), JavaScript memberikan perintah untuk menggambar bentuk, garis, teks, hingga animasi yang kompleks, sehingga memungkinkan pembuatan visualisasi data, permainan sederhana, atau elemen UI yang lebih interaktif.
+          </p>
+              
+          <h3>HTML Code:</h3>
+          <textarea
+          class="editor"
+          rows="20"
+         id="contentCode"
+        placeholder="Masukkan kode HTML dan CSS di sini"
+          >
+          <!DOCTYPE html>
+          <html>
+              <link rel="stylesheet" href="assets/css/style.css" />
+          <body>    
+              <p>Pilih gambar:</p>
+          <img id="gambar" src="assets/images/UTY.jpg" alt="" width="220" height="277">
+          <p>Mengisi :</p>
+          <canvas id="kanvas" width="220" height="277" style="border:1px solid #d3d3d3;">
+              Your browser does not support the HTML5 canvas tag.</canvas>
+          <p><button onclick="kanvas()">Try it</button></p>
+          
+                </html>
+                </textarea
+                    >
+                
+    <button class="run-button" onclick="runContentCode()">Run</button>
+    <button class="undo-button" onclick="undoContentCode()">
+    Undo
+    </button>
+                
+    <h3>Hasil:</h3>
+    <div class="preview" id="previewContent"></div>
+    </div>
+    </section>
+    </main>
+    
+
+    <!-- ----- MAIN JS ----- -->
+    <script>
+        // Riwayat Kode
+        let contentCodeHistory = [];
+        // Fungsi untuk menjalankan kode konten
+        function runContentCode() {
+          const code = document.getElementById("contentCode").value;
+          document.getElementById("previewContent").innerHTML = code;
+          contentCodeHistory.push(code);
+        }
+  
+        // Fungsi untuk mengembalikan kode sebelumnya
+        function undoContentCode() {
+          if (contentCodeHistory.length > 1) {
+            contentCodeHistory.pop(); // Hapus entri terakhir
+            const previousCode =
+              contentCodeHistory[contentCodeHistory.length - 1];
+            document.getElementById("contentCode").value = previousCode;
+            document.getElementById("previewContent").innerHTML = previousCode; // Perbarui preview
+          } else {
+            document.getElementById("previewContent").innerHTML = ""; // Hapus hasil jika tidak ada riwayat
+            document.getElementById("contentCode").value = ""; // Hapus input juga
+          }
+        }
+      </script>
+
+<script>
+  function kanvas(){
+  var c = document.getElementById("kanvas");
+  var ctx = c.getContext("2d");
+  var img = document.getElementById("gambar");
+  ctx.drawImage(img,0, 0, c.width, c.height);
+  }
+  </script>
+
+  <!-- ----- MAIN JS ----- -->
+  <script>
+    // Fungsi untuk kembali ke halaman sebelumnya
+    function goBack() {
+        window.history.back();
+    }
+</script>
+
+    </body>
+  </html>
+  
+    
+    
